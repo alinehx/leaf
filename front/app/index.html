@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>Leaf soluções</title>
+  
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <link href="styles/min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="styles/min/custom-min.css" type="text/css" rel="stylesheet" >
+</head>
+<body ng-app="leafApp" id="top" class="scrollspy">
+
+<!-- Pre Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
+
+
+<!--Navigation-->
+ <div class="navbar-fixed">
+    <nav id="nav_f" class="banner_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+            <a href="#" id="logo-container" class="brand-logo">Leaf soluções</a>
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="#intro">Serviços</a></li>                  
+                  <li><a href="#contact">Contato</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                  <li><a href="#intro">Serviços</a></li>                  
+                  <li><a href="#contact">Contato</a></li>   
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<div class="container" ng-cloak>  
+  <div ng-include="'views/alert.html'"></div>      
+</div>
+
+  
+ <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+ <script>
+   !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+   (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+   r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+   }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-XXXXX-X');
+   ga('send', 'pageview');
+</script>
+
+<!--Intro and service-->
+<div id="intro" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div  class="col s12">
+                <h2 class="center header text_h2"> Temos a solução ideal para o seu negócio  </h2>
+            </div>
+
+            <div  class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-image-flash-on"></i>
+                    <h5 class="promo-caption">Desenvolvimento Ágil</h5>
+                    <p class="light center">Temos uma equipe treinada e qualificada para entregar a sua solução de TI de forma ágil, utilizando as melhores ferramentas e metologias disponíveis no mercado.</p>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-social-group"></i>
+                    <h5 class="promo-caption">Foco no Resultado</h5>
+                    <p class="light center">Temos como objetivo alcançar o resultado esperado pelo cliente, garantindo uma entrega com qualidade e satisfação do cliente.</p>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-hardware-desktop-windows"></i>
+                    <h5 class="promo-caption">Múltiplas Plataformas</h5>
+                    <p class="light center">Desenvolvimento para diferentes plataformas, mobile, sites responsivos, desktop, app e sistemas. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Parallax-->
+<div class="parallax-container">
+    <div class="parallax"><img src="images/leaf.png"></div>
+</div>
+
+
+
+<!--Footer-->
+  <footer id="contact" class="page-footer default_color scrollspy">
+    <div class="container">  
+        <div class="row">
+            <div class="col l8 s12 offset-l2 formulario" ng-controller="EmailCtrl">
+                <h2 class="header" style="color:white; text-align: center"> Contato </h2>
+                <form class="col s12" ng-submit="submit()">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="mdi-action-account-circle prefix white-text"></i>
+                            <input id="icon_prefix" name="nome" type="text" class="validate white-text" ng-model="formulario.nome">
+                            <label for="icon_prefix" class="white-text" >Nome</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="mdi-communication-email prefix white-text"></i>
+                            <input id="icon_email" name="email" type="email" class="validate white-text" ng-model="formulario.email">
+                            <label for="icon_email" class="white-text">E-mail</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="mdi-editor-mode-edit prefix white-text"></i>
+                            <textarea id="icon_prefix2" name="mensagem" ng-model="formulario.mensagem" class="materialize-textarea white-text"></textarea>
+                            <label for="icon_prefix2" class="white-text">Mensagem</label>
+                        </div>
+                        <div class="col offset-s5 s5">
+                            <button class="btn waves-effect waves-light green darken-1" type="submit">Enviar
+                                <i class="mdi-content-send right white-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+    <div class="footer-copyright default_color">
+        
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="scripts/min/plugin-min.js"></script>
+  <script src="scripts/min/custom-min.js"></script>
+   
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  
+
+  <!-- endbuild -->
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  
+  
+  <script src="scripts/app.js"></script>
+  <script src="scripts/services/alert.js"></script>
+  <script src="scripts/controllers/email.js"></script>
+
+  
+  
+</body>
+</html>
+
+
+
